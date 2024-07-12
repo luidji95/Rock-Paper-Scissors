@@ -1,13 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock-Paper-Scissors</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div class="overlay" id="overlay">
+
+        <div class="input-name-content">
+            <span class="give-up" id="give-up">&times;</span>
+            <h2 class="headlineForm">Enter your name</h2>
+            <form id="nicknameForm">
+                <input type="text" id="nicknameInput" placeholder="Player 1" required>
+            </form>
+            <button id="exit">Back</button>
+            <button type="submit" id="enterGameBtn">Enter the Game</button>
+        </div>
+
+    </div>
+
+
+    <div class="overlay1" id="overlay1">
+
+        <div class="result">
+            <div class="your">
+                <p>YOU</p>
+                <div class="cyrcle1 cyrcle" id="colorpicker"><div class="cyrcle2 cyrcle-inside"><img class="you rockpic" id="you"></div></div>
+            </div>
+            <div class="msg">
+                <div class="message">
+                    <p class="win-loss" id="win-lose">Poruka</p>
+                    <p class="message-text" id="message-text">Poruka</p>
+                    
+                    <button class="conutinoue" id="continue">Countinue</button>
+                </div>
+            </div>
+            <div class="host">
+                <p>HOST</p>
+                <div class="cyrcle1 cyrcle" id="colorpicker1"><div class="cyrcle2 cyrcle-inside"><img class="host rockpic" id="host"></div></div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+        
+
+    </div>
+</body>
