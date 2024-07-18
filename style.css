@@ -57,3 +57,64 @@ body{
     border: 2px solid black;
     color:white;
 }
+
+
+.rules-section{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 15px;
+    color: white;
+}
+.rules-section-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px; 
+    width: 100%;
+    position: relative;
+}
+.rules-section-picture{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgrules{
+    width: 100%;
+}
+.rules-section-explanation{
+    font-family: cursive;
+    font-size: 20px;
+    padding-top: 50px;
+
+}
+.backbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backToHome{
+    padding: 10px;
+    font-size:15px;
+    border-radius: 15px;
+    font-family: cursive;
+    width: 200px;
+}
+.backToHome:hover{
+    background-color: brown;
+    color:black;
+    border: 2px solid black;
+    color:white;
+}
+.close{
+  position: absolute;
+  top:20px;
+  right: 20px;
+  font-size: 50px;
+  color:black;
+
+}
+.close:hover{
+  cursor: pointer;
+  
+}
