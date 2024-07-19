@@ -217,3 +217,72 @@ body{
     color:white;
    
 }
+
+
+
+.game{
+    /* display: none; */
+    height: 100%;
+
+}  
+.game-content{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(54,194,75,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    font-size: 30px;
+    color: white;
+    
+}
+.game-headline{
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.game-head{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+
+
+.game-main{
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(54,194,75,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 200px;
+
+    
+}
+.exit-from-game{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-left: 50px;
+
+}
+.exitgame-btn{
+    padding: 15px;
+    font-size:30px;
+    border-radius: 15px;
+    font-family: cursive;
+    width: 200px; 
+}
+.exitgame-btn:hover{
+    
+    background-color: brown;
+    color:black;
+    border: 2px solid black;
+    color:white;
+    
+}
