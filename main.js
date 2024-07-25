@@ -138,3 +138,66 @@ const rockPaperScissor = function(){
 }
 
 const playGame = rockPaperScissor();
+
+
+
+
+enterGame.addEventListener('click', function(){
+    welcome.classList.add('displaynone');
+    game.classList.remove('displaynone');
+    overlay.classList.add('displaynone');
+
+    numberRounds.innerText = playGame.getRounds();
+    ComputerScore.innerText = " "+ playGame.getCompScore();
+
+    if(nickname.value === ""){
+        myScore.innerText =  " "+playGame.getPlayerScore();
+    } else {
+        plScore.innerHTML = playGame.getPlayerName()+"'s Score: ";
+        myScore.innerText = playGame.getPlayerScore();
+    }
+    
+    
+});
+
+
+const setRoundsToDefault = function(){
+    remRounds.textContent = "";
+}
+
+rockpic.addEventListener('click', function(ev){
+
+    overlay1.classList.remove('displaynone'); 
+
+    playGame.generateRandomNumber();
+    playGame.setCompChoice(choices[playGame.getRandomNumber()]);
+
+    host.src = choicesImage[0][playGame.getCompChoice()]; 
+
+    cyrcleColorPicker.style.backgroundColor = "rgb(23, 96, 165)";
+
+    playGame.setPlayerChoice(ev.target.id);
+    you.src = choicesImage[0][playGame.getPlayerChoice()];
+
+  
+    
+    match(playGame.getPlayerChoice(), playGame.getCompChoice());    
+    
+});
+
+
+conti.addEventListener('click', function(){
+    overlay1.classList.add('displaynone');
+    if(playGame.getRounds() < 1){
+        overlay2.classList.remove('displaynone');
+        if(playGame.getPlayerScore() > playGame.getCompScore()){
+            finalResultMessage.innerText = "VICTORY";
+        } else {
+            finalResultMessage.innerHTML = "DEFEAT";
+        }
+    }
+});
+
+playAgain.addEventListener('click', function(){
+    location.reload();
+});
