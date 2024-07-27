@@ -300,3 +300,52 @@ const match = function(x, y){
         
     }
 }
+
+    
+paperpic.addEventListener('click', function(ev){
+
+    overlay1.classList.remove('displaynone'); 
+
+    playGame.generateRandomNumber();
+    playGame.setCompChoice(choices[playGame.getRandomNumber()]);
+
+    host.src = choicesImage[0][playGame.getCompChoice()]; 
+
+
+
+    playGame.setPlayerChoice(ev.target.id);
+    you.src = choicesImage[0][playGame.getPlayerChoice()];
+
+    cyrcleColorPicker.style.backgroundColor = "rgb(240, 179, 12)";
+    
+    
+    match(playGame.getPlayerChoice(), playGame.getCompChoice()); 
+});
+
+scissor.addEventListener('click', function(ev){
+
+    overlay1.classList.remove('displaynone'); 
+
+    playGame.generateRandomNumber();
+    playGame.setCompChoice(choices[playGame.getRandomNumber()]);
+
+    host.src = choicesImage[0][playGame.getCompChoice()]; 
+
+
+
+    playGame.setPlayerChoice(ev.target.id);
+    you.src = choicesImage[0][playGame.getPlayerChoice()];
+
+    cyrcleColorPicker.style.backgroundColor = "rgb(241, 55, 8)";
+    
+    match(playGame.getPlayerChoice(), playGame.getCompChoice()); 
+});
+    
+
+
+
+
+
+
+
+  
