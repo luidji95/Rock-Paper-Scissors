@@ -201,3 +201,102 @@ conti.addEventListener('click', function(){
 playAgain.addEventListener('click', function(){
     location.reload();
 });
+
+const match = function(x, y){
+    console.log(playGame.getCompChoice());
+    console.log(playGame.getPlayerChoice());
+
+
+
+    if(playGame.getRounds() > 0){
+        switch(x) {
+            case 'rock':
+                switch(y) {
+                    case 'rock':
+                        messageText.innerHTML = "Well, well, well... looks like we've got ourselves a stalemate. It's like the universe is playing a prank on both of us. Time to flip a coin for the ultimate tiebreaker!";
+                        winLose.textContent = "TIE";
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(23, 96, 165)";
+                        break;
+                    case 'paper':
+                        messageText.innerHTML = "Oops! Looks like the computer's got the upper hand this time. Don't worry, losing builds character... or at least that's what I tell myself after a crushing defeat in rock, paper, scissors.";
+                        winLose.textContent = "LOSE";
+                        playGame.increaseCompScore();
+                        ComputerScore.innerText = playGame.getCompScore();
+                        playGame.decreaseRounds();
+                        numberRounds.innerText = playGame.getRounds();
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(240, 179, 12)";
+                        break;
+                    case 'scissor':
+                        messageText.innerHTML = "Congratulations! You've outsmarted a computer in a game of chance. Don't let it go to your head... but feel free to celebrate like a champion!";
+                        winLose.textContent = "WIN";
+                        playGame.increasePlayerScore();
+                        myScore.innerText = playGame.getPlayerScore();
+                        playGame.decreaseRounds();
+                        numberRounds.innerText = playGame.getRounds();
+                        myScore.innerText = playGame.getPlayerScore();
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(241, 55, 8)";
+                        break;
+                }
+                break;
+            case 'paper':
+                switch(y) {
+                    case 'rock':
+                        messageText.innerHTML = "Congratulations! You've outsmarted a computer in a game of chance. Don't let it go to your head... but feel free to celebrate like a champion!";
+                        winLose.textContent = "WIN";
+                        playGame.increasePlayerScore();
+                        myScore.innerText = playGame.getPlayerScore();
+                        playGame.decreaseRounds();
+                        numberRounds.innerText = playGame.getRounds();
+                        myScore.innerText = playGame.getPlayerScore();
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(23, 96, 165)";
+                        break;
+                    case 'paper':
+                        messageText.innerHTML = "Well, well, well... looks like we've got ourselves a stalemate. It's like the universe is playing a prank on both of us. Time to flip a coin for the ultimate tiebreaker!";
+                        winLose.textContent = "TIE";
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(240, 179, 12)";
+                        break;
+                    case 'scissor':
+                        messageText.innerHTML = "Oops! Looks like the computer's got the upper hand this time. Don't worry, losing builds character... or at least that's what I tell myself after a crushing defeat in rock, paper, scissors.";
+                        winLose.textContent = "LOSE";
+                        playGame.increaseCompScore();
+                        ComputerScore.innerText = playGame.getCompScore();
+                        playGame.decreaseRounds();
+                        numberRounds.innerText = playGame.getRounds();
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(241, 55, 8)";
+                        break;
+                }
+                break;
+            case 'scissor':
+                switch(y) {
+                    case 'rock':
+                        messageText.innerHTML = "Oops! Looks like the computer's got the upper hand this time. Don't worry, losing builds character... or at least that's what I tell myself after a crushing defeat in rock, paper, scissors.";
+                        winLose.textContent = "LOSE";
+                        playGame.increaseCompScore();
+                        ComputerScore.innerText = playGame.getCompScore();
+                        playGame.decreaseRounds();
+                        numberRounds.innerText = playGame.getRounds();
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(23, 96, 165)";
+                        break;
+                    case 'paper':
+                        messageText.innerHTML = "Congratulations! You've outsmarted a computer in a game of chance. Don't let it go to your head... but feel free to celebrate like a champion!";
+                        winLose.textContent = "WIN";
+                        playGame.increasePlayerScore();
+                        myScore.innerText = playGame.getPlayerScore();
+                        playGame.decreaseRounds();
+                        numberRounds.innerText = playGame.getRounds();
+                        myScore.innerText = playGame.getPlayerScore();
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(240, 179, 12)";
+                        break;
+                    case 'scissor':
+                        messageText.innerHTML = "Well, well, well... looks like we've got ourselves a stalemate. It's like the universe is playing a prank on both of us. Time to flip a coin for the ultimate tiebreaker!";
+                        winLose.textContent = "TIE";
+                        cyrcleColorPicker1.style.backgroundColor = "rgb(241, 55, 8)";
+                        break;
+                }
+                break;
+        }
+    } else {
+        location.reload();
+        
+    }
+}
